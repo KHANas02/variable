@@ -1,0 +1,50 @@
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: #70f7da;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  font-family: "Source Code Pro", monospace;
+  font-size: 4em;
+  font-weight: 200;
+  will-change: font-weight;
+}
+
+span:hover {
+  animation-name: getBold;
+  animation-duration: 2500ms;
+  animation-iteration-count: 1;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+span:not(:hover) {
+  animation-name: getThin;
+  animation-duration: 2500ms;
+  animation-iteration-count: 1;
+  font-weight: 200;
+}
+
+@keyframes getBold {
+  0% {
+    font-variation-settings: "wght" 200;
+  }
+  100% {
+    font-variation-settings: "wght" 900;
+  }
+}
+
+@keyframes getThin {
+  0% {
+    font-variation-settings: "wght" 900;
+  }
+  100% {
+    font-variation-settings: "wght" 200;
+  }
+}
